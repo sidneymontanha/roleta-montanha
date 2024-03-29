@@ -50,8 +50,8 @@ container{
 
 img{
     position: relative;
-    width: 35%;
-    height: 35%;
+    width: 30%;
+    height: 30%;
     z-index: 100;
     transition: all 15s;
     
