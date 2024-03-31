@@ -7,16 +7,13 @@
 }
 
 body{
-    
-    position: relative;
-    text-align: center;
-    background: url(imagens/THE\ UNION\ LOGO\ 3D\ \(1\).png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    max-width: 100%;
-    max-height: 100%;
-      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #731f7a;
+       
 }
 .number{
     width: 100px;
@@ -110,6 +107,7 @@ P{
 }
 
 main{
+    
     display: grid;
     grid-template-columns: 1fr 3fr;
     
@@ -155,6 +153,18 @@ audio{
         color: white;
         font-size: 12px;
         margin-bottom: 20px;
+    }
+    .vara{
+        height: 35px;
+        width: 5px;
+        background-color: aliceblue;
+        margin: auto;
+        position: relative;
+        top: 25px;
+        border-radius: 0px 0px 8px 8px;
+        border: 1px solid #000;
+        border-top: 5px solid #000;
+        z-index: 1000;
     }
     
     
