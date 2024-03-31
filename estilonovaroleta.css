@@ -7,15 +7,15 @@
 }
 
 body{
-    margin-top: 100px;
     position: relative;
     text-align: center;
     background: url(imagens/THE\ UNION\ LOGO\ 3D\ \(1\).png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    
      
 }
 .number{
@@ -26,7 +26,7 @@ body{
 
 .acumolo{
     display: block;
-    justify-self: start;
+    flex-direction: column;
 }
 
   
@@ -44,8 +44,8 @@ body{
     z-index: 1000;
 }
 container{
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-direction: column;
 }
 
 img{
@@ -58,13 +58,9 @@ img{
 }
 .val{
     position: absolute;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-    justify-content: center;
+    display: block;
     flex-direction: column;
-   
-       
+          
 }
 label{
     position: relative;
@@ -74,6 +70,7 @@ label{
     margin-left: 20px;
     margin-right: 40px;
     font-size: 1.5em;
+    margin-bottom: 20px;
    
 }
 input{
@@ -85,18 +82,22 @@ input{
     border-radius: 8px;
     outline: none;
     box-shadow: 10px 10px 0 0;
+    margin-bottom: 20px;
     
 }
-
 P{
     position: relative;
     width: 250px;
     height: 20px;
     color: white;
-    margin-left: 20px;
-    margin-right: 40px;
     font-size: 1em;
-}  
+    margin-bottom: 20px;
+}
+
+main{
+    display: block;
+    flex-direction: column;
+}
 
 
 audio{
@@ -108,4 +109,27 @@ audio{
     50%{
         right: 50%;
     }
+}
+
+@media screen and (min-width: 768px) {
+    main{
+        display: block;
+        flex-direction: column;
+    }
+
+    .acumolo{
+        display: block;
+        flex-direction: column;
+    }
+
+    container{
+        display: block;
+        flex-direction: column;
+    }
+
+    .val{
+        display: block;
+        flex-direction: column;
+    }
+
 }
