@@ -30,7 +30,7 @@ body{
 }
 
 .creditos{
-    border: 1px solid red;
+    
     width: 100%;
     height: 100%;
     display: block;
@@ -43,7 +43,7 @@ body{
 }
 
 .sorteio{
-    border: 1px solid blue;
+    
     width: 100%;
 }
 
