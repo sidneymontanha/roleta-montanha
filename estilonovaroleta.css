@@ -7,9 +7,7 @@
 }
 
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
     width: 100%;
     height: 100%;
     background-image: url(./imagens/THE\ UNION\ LOGO\ 3D\ \(1\).png);
@@ -17,6 +15,11 @@ body{
     background-repeat: no-repeat;
 
 }
+
+.premiacao{
+    display: block;
+}
+
 .number{
     width: 100px;
     height: 200px;
@@ -29,10 +32,10 @@ body{
 }
 
 .creditos{
-    
+    border: 1px solid red;
     width: 100%;
     height: 100%;
-    display: block;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
@@ -41,8 +44,10 @@ body{
 }
 
 .sorteio{
-    
+    display: block;
+    border: 1px solid green;
     width: 100%;
+    height: 100%;
 }
 
 .vara{
@@ -167,4 +172,13 @@ audio{
     
     
 
+}
+
+video{
+    display: none;
+}
+
+video source {
+    width: 100%;
+    height: 100%;
 }
