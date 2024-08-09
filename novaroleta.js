@@ -28,7 +28,7 @@ function girar(){
             res.innerHTML = ''
             valor = rand/360
             valor = (valor - parseInt(valor.toString().split('.')[0])) * 360
-            console.log(valor)
+            //console.log(valor)
  
             roleta.style.transform = 'rotate('+ rand+'deg)'
             
@@ -36,17 +36,17 @@ function girar(){
         
             setTimeout(() =>{
             
-            if(valor > 0 && valor < 22.5 && acum > 2000){
+            if(valor > 0 && valor <= 22.5){
                 res.innerHTML = 'PARABENS VOCE GANHOU MIL REAIS'    
             }else if(valor > 22.5 && valor <= 45){
                 res.innerHTML = 'OPSS VOCE PERDEU TUDO'
-                img.src = ''  
+                  
             }else if( valor > 45 && valor <=67.5){
                 res.innerHTML = 'PARABENS VOCE GANHOU UM REAL'
                 
             }else if(valor > 67.5 && valor <= 90){
                 res.innerHTML = 'VOCE TEM MAIS UMA CHANCE GIRE NOVAMENTE'
-        
+                
             }else if(valor > 90 && valor <= 112.5){
                 res.innerHTML = 'PARABENS VOCE GANHOU QUINHENTOS REAIS'
                 
@@ -64,13 +64,13 @@ function girar(){
                 
             }else if(valor > 202.8 && valor <= 225){
                 res.innerHTML = 'AQUI VOCE PODE DOBAR O VALOR DO SEU PREMIO'
-            
+                
             }else if(valor > 225 && valor <= 247.5){
                 res.innerHTML = 'VOCE GANHOU CEM REAIS'
                 
             }else if(valor > 247.5 && valor <= 270){
                 res.innerHTML = 'QUE LEGAL VOCE PODE GIRAR NOVAMENTE'
-            
+                
             }else if(valor > 270 && valor <= 292.5){
                 res.innerHTML = 'VOCE GANHOU VINTE RREAIS'
                 
