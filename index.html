@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="estilonovaroleta.css">
+    <link rel="stylesheet" href="style.css">
     <script defer src="novaroleta.js"></script>
 
     <title>roleta especial show</title>
 </head>
 
 <body>
+  <header>
+    <div class="topo__marca">
+      <a href="" class="link_home">
+        <img src="imagens/preto.svg" alt="">
+        <h1>THE UNION ROLETA</h1>
+      </a>
+    </div>
+  </header>
   
  <main>
   
@@ -22,28 +30,56 @@
         <div class="val">
           <p class="mvalor">CREDITOS</p>
           <input type="number" class="valor" id="valor" name="valor" placeholder="aposta">
-          <p class="MRES">PREMIAÇÃO</p>
-          <p class="RES"></p>
-          
         </div>
-      </section>
+        </section>
+         
+        <SPAN class="vara"></SPAN>
+        
       <section class="sorteio">
-        <div class="container">
+        <div class="spinner">the union roleta</div>
           <div class="img">
-            <div class="vara"></div>
-            <div> 
-              <img id="roleta" src="imagens/roleta3.png" alt="">  
-            </div>
+            <figure> 
+              <img class="roleta" src="imagens/rotecolorida1.png" alt="">  
+            </figure>
           </div>
-        </div>
       </section>
+
       <section class="premiacao">
+        <figure class="blides">
+            <img src="imagens/abridorprata.png" alt="" class="abridor0" id="blindes">
+            <img src="imagens/abridorpreto.png" alt="" class="abridor1" id="blindes">
+            <img src="imagens/boneamarelo.png" alt="" class="bone0" id="blindes">
+            <img src="imagens/bonelaranja.png" alt="" class="bone1" id="blindes">
+            <img src="imagens/bonepreto.png" alt="" class="bone2" id="blindes">
+            <img src="imagens/bonerosa.png" alt="" class="bone3" id="blindes">
+            <img src="imagens/boneverde.png" alt="" class="bone4" id="blindes">
+            <img src="imagens/camisetacaveira.png" alt="" class="camiseta0" id="blindes">
+            <img src="imagens/camisetapreta.png" alt="" class="camiseta1" id="blindes">
+            <img src="imagens/camisetaroxa.png" alt="" class="camiseta2" id="blindes">
+            <img src="imagens/chicara.png" alt="" class="caneca" id="blindes">
+            <img src="imagens/chineloamarelo1.png" alt="" class="chinelo1" id="blindes">
+            <img src="imagens/chinelopreto1.png" alt="" class="chinelo2" id="blindes">
+            <img src="imagens/mosepad.png" alt="" class="mousepad" id="blindes">
+            <img src="imagens/petpreto.png" alt="" class="patch0" id="blindes">
+            <img src="imagens/petroxo.png" alt="" class="patch1" id="blindes">
+            <img src="imagens/petvermelho.png" alt="" class="patch2" id="blindes">
+            <img src="imagens/sacolila.png" alt="" class="sacochila" id="blindes">
+            <img src="imagens/suportecelular1.png" alt="" class="suporte" id="blindes">
+
+          
+        </figure>
           <span class="premio">
             <video class="video">
-              <source src="videos/fogosArtificios.mp4" type="video/mp4">
-              
+              <source src="videos/fogosArtificios.mp4" type="video/mp4"> 
+            </video>
+            <video class="video1">
+              <source src="videos/roleta.mp4" type="video/mp4"> 
             </video>
           </span>
+          <div>
+            <p class="MRES">PREMIAÇÃO</p>
+            <p class="RES"></p> 
+          </div>   
       </section>        
  </main> 
     <audio class="Wheel" id="wheel" controls="controns" src="audios/mixkit-bike-wheel-spinning-1613.wav"></audio>
