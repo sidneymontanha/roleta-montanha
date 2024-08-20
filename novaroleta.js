@@ -2,6 +2,7 @@ const roleta = document.querySelector('img.roleta');
 const wheel = document.querySelector('audio');
 const inputValor = document.querySelector('.valor');
 const resultado = document.querySelector('.RES');
+const mressultado = document.querySelector('.MRES')
 const video = document.querySelector('.video');
 const video1 = document.querySelector('.video1');
 const acumuladoInput = document.querySelector('#acumolo');
@@ -32,6 +33,8 @@ const vara = document.querySelector('.vara')
 
 roleta.addEventListener('click', girar);
 
+
+
 const mostreSorteio = ()=>{
     sorteioSection.style.display = 'block'
 
@@ -55,17 +58,19 @@ function ocultarpremio(premioelemento){
 function playVideo(videoElement, y) {
     ocultaSorteio()
     mostrepremio(y)
+    mressultado.style.display = 'none'
+    resultado.style.display = 'none'
     vara.style.display = 'none'
     videoElement.style.display = 'block';
     videoElement.style.width = '100vw';
     videoElement.style.height = '100vh';
     videoElement.play();
-    
-
     setTimeout(() => {
         ocultarpremio(y)
         videoElement.style.display = 'none';
         mostreSorteio()
+        resultado.style.display = 'block'
+        mressultado.style.display = 'block'
         vara.style.display = 'block'
     }, 7000);
 }
@@ -190,31 +195,15 @@ function verificarPremio(angulo) {
             resultado.innerHTML = `O PRÊMIO SORTEADO ${premio === '1' ? 'UM' : premio} JA SE ESGOTOU. VOCÊ PODE GIRAR NOVAMENTE`;
             playVideo(video1);
         } else {
-            resultado.innerHTML = `PARABÉNS! VOCÊ GANHOU ${premio === '1' ? 'UM' : premio} `;
             
             playVideo(video, premioelemento);
             adicionarAoEstoque(premio);
+            resultado.innerHTML = `PARABÉNS! VOCÊ GANHOU ${premio === '1' ? 'UM' : premio} `;
+            resultado.style.color = 'blue'
             
             
         }
-    } else {
-        const mensagensAlternativas = [
-            { min: 22.5, max: 45, mensagem: 'OPSS! VOCÊ PERDEU TUDO' },
-            { min: 67.5, max: 90, mensagem: 'VOCÊ TEM MAIS UMA CHANCE, GIRE NOVAMENTE' },
-            { min: 112.5, max: 135, mensagem: 'VOCÊ NÃO GANHOU NADA. ACERTOU O ZERO' },
-            { min: 157.5, max: 180, mensagem: 'NÃO FOI DESSA VEZ, MAS NÃO DESISTA' },
-            { min: 202.8, max: 225, mensagem: 'AQUI VOCÊ PODE DOBRAR O VALOR DO SEU PRÊMIO' },
-            { min: 247.5, max: 270, mensagem: 'VOCÊ PODE GIRAR NOVAMENTE' },
-            { min: 292.5, max: 315, mensagem: 'ZERO! VOCÊ NÃO GANHOU NADA' },
-            { min: 337.5, max: 360, mensagem: 'OPSS! VOCÊ PERDEU TUDO' }
-        ];
-
-        const mensagemAlternativa = mensagensAlternativas.find(m => angulo > m.min && angulo <= m.max);
-        if (mensagemAlternativa) {
-            resultado.innerHTML = mensagemAlternativa.mensagem;
-            playVideo(video1);
-        }
-    }
+    } 
 }
 
 function verificarLimite(nomePremio, limiteMaximo) {
@@ -232,6 +221,7 @@ function adicionarAoEstoque(nomePremio) {
 function carregarJogo() {
     acumuladoInput.value = 0;
     mostreSorteio()
+    
 }
 
 carregarJogo();
