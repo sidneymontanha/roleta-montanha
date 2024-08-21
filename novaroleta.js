@@ -193,13 +193,13 @@ function verificarPremio(angulo) {
         
         if (verificarLimite(premio, limiteMaximo)) {
             resultado.innerHTML = `O PRÊMIO SORTEADO ${premio === '1' ? 'UM' : premio} JA SE ESGOTOU. VOCÊ PODE GIRAR NOVAMENTE`;
-            playVideo(video1);
+            playVideo(video1, premioelemento);
         } else {
             
             playVideo(video, premioelemento);
             adicionarAoEstoque(premio);
             resultado.innerHTML = `PARABÉNS! VOCÊ GANHOU ${premio === '1' ? 'UM' : premio} `;
-            resultado.style.color = 'blue'
+            
             
             
         }
