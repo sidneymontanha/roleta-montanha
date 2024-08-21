@@ -187,12 +187,15 @@ function verificarPremio(angulo) {
         premio = 'mousepad';
         limiteMaximo = 10;
         premioelemento = mousepad;
-    } else if (angulo > 353 & angulo <= 10.7 ) {
+    } else if (angulo > 353 & angulo <= 360 ) {
         premio = 'sacochila';
         limiteMaximo = 74;
         premioelemento = sacochila;
-    }
-    if (premio) {
+    } else if (angulo > 0 & angulo <= 10.7 ) {
+        premio = 'sacochila';
+        limiteMaximo = 74;
+        premioelemento = sacochila;
+    }if (premio) {
         
         if (verificarLimite(premio, limiteMaximo)) {
             resultado.innerHTML = `O PRÊMIO SORTEADO ${premio === '1' ? 'UM' : premio} JA SE ESGOTOU. VOCÊ PODE GIRAR NOVAMENTE`;
