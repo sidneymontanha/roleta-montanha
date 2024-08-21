@@ -28,7 +28,7 @@ const patch2 = document.querySelector('.patch2')
 const sacochila = document.querySelector('.sacochila')
 const suporte = document.querySelector('.suporte')
 const vara = document.querySelector('.vara')
-
+const html = document.querySelector('html')
 
 
 roleta.addEventListener('click', girar);
@@ -56,11 +56,13 @@ function ocultarpremio(premioelemento){
 
 
 function playVideo(videoElement, y) {
+    
     ocultaSorteio()
     mostrepremio(y)
     mressultado.style.display = 'none'
     resultado.style.display = 'none'
     vara.style.display = 'none'
+    premiacaoSection.style.display = 'block'
     videoElement.style.display = 'block';
     videoElement.style.width = '100vw';
     videoElement.style.height = '100vh';
@@ -68,6 +70,7 @@ function playVideo(videoElement, y) {
     setTimeout(() => {
         ocultarpremio(y)
         videoElement.style.display = 'none';
+        premiacaoSection.style.display = 'none'
         mostreSorteio()
         resultado.style.display = 'block'
         mressultado.style.display = 'block'
@@ -184,7 +187,7 @@ function verificarPremio(angulo) {
         premio = 'mousepad';
         limiteMaximo = 10;
         premioelemento = mousepad;
-    } else if (angulo > 535 & angulo <= 10.7 ) {
+    } else if (angulo > 353 & angulo <= 10.7 ) {
         premio = 'sacochila';
         limiteMaximo = 74;
         premioelemento = sacochila;
