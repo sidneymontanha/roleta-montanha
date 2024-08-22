@@ -81,6 +81,17 @@ main{
     width: 100%;
     height: 100vh;
 }
+.nomepremio{
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 50;
+
+    
+
+}
 
 audio{
     display: none;

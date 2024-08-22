@@ -30,6 +30,7 @@ const suporte = document.querySelector('.suporte')
 const vara = document.querySelector('.vara')
 const html = document.querySelector('html')
 const limpar = document.querySelector('.limpar')
+const textonomepremio = document.querySelector('.nomepremio')
 
 roleta.addEventListener('click', girar);
 
@@ -50,7 +51,7 @@ roleta.addEventListener('click', girar);
 
 const mostreSorteio = ()=>{
     sorteioSection.style.display = 'block'
-
+    textonomepremio.style.display  = 'block'
 }
 
 const ocultaSorteio = ()=>{
@@ -69,11 +70,11 @@ function ocultarpremio(premioelemento){
 
 
 function playVideo(videoElement, y) {
-    
     ocultaSorteio()
     mostrepremio(y)
-    mressultado.style.display = 'none'
-    resultado.style.display = 'none'
+    textonomepremio.style.display  = 'block'
+    mressultado.style.display = 'block'
+    resultado.style.display = 'block'
     vara.style.display = 'none'
     premiacaoSection.style.display = 'block'
     videoElement.style.display = 'block';
@@ -85,6 +86,7 @@ function playVideo(videoElement, y) {
         videoElement.style.display = 'none';
         premiacaoSection.style.display = 'none'
         mostreSorteio()
+        
         resultado.style.display = 'block'
         mressultado.style.display = 'block'
         vara.style.display = 'block'
