@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="novaroleta.js"></script>
 
     <title>roleta especial show</title>
 </head>
 
 <body>
-  <header>
-    <div class="topo__marca">
-      
-        <div><img src="imagens/poker-horizontal.png" alt=""></div>
-        <div><h1>ROLETA PREMIADA THE UNION</h1></div>
-        
-      
-    </div>
+  <header class="header">
+    <nav class="nav">
+        <img class="logo" src="imagens/poker-horizontal.png" alt="">
+        <button class="hamburger"></button>
+        <ul class="nav-list">
+          <li><a class="exportar" href="">exportar dados</a></li>
+          <li><a class="ultimoPremio" href="">ultimo premio</a></li>
+          <li><a class="limparDados" href="">limpar dados</a></li>
+        </ul>
+    </nav>
   </header>
   
  <main>
+      <h1>ROLETA PREMIADA THE UNION</h1>
   
       <section class="creditos">
       <div class="acum" id="acum">
@@ -85,7 +88,9 @@
       <div class="nomepremio">
         <p class="MRES">PREMIAÇÃO</p>
         <p class="RES"></p>
-      </div>       
+      </div>
+      
+      <p class="pdf"></p>
  </main> 
     <audio class="Wheel" id="wheel" controls="controns" src="audios/mixkit-bike-wheel-spinning-1613.wav"></audio>
     

@@ -29,25 +29,39 @@ const sacochila = document.querySelector('.sacochila')
 const suporte = document.querySelector('.suporte')
 const vara = document.querySelector('.vara')
 const html = document.querySelector('html')
-const limpar = document.querySelector('.limpar')
 const textonomepremio = document.querySelector('.nomepremio')
+const hamburger = document.querySelector('.hamburger')
+const nav = document.querySelector('.nav')
+const exportar = document.querySelector('.exportar')
+const ultimoPremio = document.querySelector('.ultimoPremio')
+const limparDados = document.querySelector('.limparDados')
+const pdf = document.querySelector('pdf')
+
+
+
+
+exportar.addEventListener('click', (e) =>{
+    e.preventDefault()
+    exportar.style.color = 'red'
+})
+
+ultimoPremio.addEventListener('click', () =>{
+
+})
+
+limparDados.addEventListener('click', () =>{
+
+})
+
+
+
+
+hamburger.addEventListener('click', ()=>{
+    nav.classList.toggle('active')
+})
 
 roleta.addEventListener('click', girar);
 
-/*limpar.addEventListener('click', ()=>{
-    let reposta = confirm('TEM CERTEZA QUE DESEJA EXCLUIR TODOS OS DADOS ARMAZENADOS??')
-    if(reposta == true){
-        const totalapagar = JSON.parse(localStorage.getItem('meuArr')) || [];
-        if(totalapagar.length > 0){
-            localStorage.clear()
-            alert('TODOS OS DADOS FORAM EXCLUIDOS COM SUCESSO!!!')
-        }else{
-            alert('NÃO HÁ DADOS PARA SEREM EXCLUIDOS!!')
-        }
-    }else{
-        alert('EXCLUSÃO CANCELADA')
-    }    
-})*/
 
 const mostreSorteio = ()=>{
     sorteioSection.style.display = 'block'
@@ -241,7 +255,7 @@ function adicionarAoEstoque(nomePremio) {
 
 function carregarJogo() {
     acumuladoInput.value = 0;
-    mostreSorteio()
+    //mostreSorteio()
     
 }
 
